@@ -1,5 +1,13 @@
 .activities {
-  padding-bottom: 94px;
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+  @media screen and (min-width: $desktop) {
+    display: block;
+    padding-bottom: 94px;
+  }
   .activities-heading {
     font-weight: bold;
     font-size: 36px;

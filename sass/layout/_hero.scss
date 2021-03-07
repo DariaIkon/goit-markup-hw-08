@@ -1,23 +1,36 @@
 .hero {
   margin: 0 auto;
   background-color: $bg-dark-color;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   border: 1px solid #000000;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  @media screen and (min-width: $desktop) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
   .hero-box {
     margin: 0 auto;
-    width: 696px;
+    width: 360px;
+    height: 84px;
+    @media screen and (min-width: $desktop) {
+      width: 696px;
+      height: 120px;
+    }
     .hero-heading {
-      margin: 0;
       font-weight: 900;
-      font-size: 44px;
-      line-height: 1.364;
+      font-size: 26px;
+      line-height: 1.615;
       text-align: center;
       letter-spacing: 0.06em;
       text-transform: uppercase;
       color: $main-light-color;
       margin: 0 auto;
+      @media screen and (min-width: $desktop) {
+        font-size: 44px;
+        line-height: 1.364;
+      }
     }
   }
   .hero-btn {
@@ -44,17 +57,92 @@
   }
 }
 .overlay {
-  content: "";
-  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url("../images/Overlay.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  max-width: 480px;
+  min-height: 400px;
+  @media screen and (min-width: $tablet) {
+    max-width: 768px;
+    min-height: 400px;
+  }
+  @media screen and (min-width: $desktop) {
+    max-width: 1600px;
+    min-height: 600px;
+  }
+}
+@media screen and (max-width: $desktop - 1px) {
+  .hero {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../../images/overlay/overlay-480-x1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (max-width: $desktop - 1px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: $desktop - 1px),
+  screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: $desktop - 1px),
+  screen and (min-resolution: 192dpi) and (max-width: $desktop - 1px),
+  screen and (min-resolution: 2dppx) and (max-width: $desktop - 1px) {
+  .hero {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../../images/overlay/overlay-480-x2.jpg");
+  }
+}
+@media screen and (min-width: $tablet) {
+  .hero {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../../images/overlay/overlay-768-x1.jpg");
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: $tablet),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: $tablet),
+  screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: $tablet),
+  screen and (min-resolution: 192dpi) and (min-width: $tablet),
+  screen and (min-resolution: 2dppx) and (min-width: $tablet) {
+  .hero {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../../images/overlay/overlay-768-x2.jpg");
+  }
+}
+@media screen and (min-width: $desktop) {
+  .hero {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../../images/overlay/overlay-1600-x1.jpg");
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: $desktop),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: $desktop),
+  screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: $desktop),
+  screen and (min-resolution: 192dpi) and (min-width: $desktop),
+  screen and (min-resolution: 2dppx) and (min-width: $desktop) {
+  .hero {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../../images/overlay/overlay-1600-x2.jpg");
+  }
 }

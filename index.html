@@ -26,53 +26,65 @@
                 <a class="webstudio-logo-header" href="#"
                     >Web<span class="webstudio-black">Studio</span>
                 </a>
-            <nav class="menu">
-                <ul class="list-studio-menu list-no-style">
-                    <li>
-                        <a 
-                            class="link-studio" href="./index.html"
-                            >Студия</a
-                        >
-                    </li>
-                    <li>
-                        <a 
-                            href="./portfolio.html"
-                            >Портфолио</a
-                        >
-                    </li>
-                    <li>
-                        <a 
-                            href="#"
-                            >Контакты</a
-                        >
-                    </li>
-                </ul>
-            </nav>
+                <button 
+                        class="header-button" 
+                        type="button" 
+                        aria-expanded="false" 
+                        aria-controls="header-menu" 
+                        data-menu-button>
+                    <svg aria-label="переключатель моюбильного меню">
+                        <use class="button-close-menu" href="./images/sprite-button-menu.svg#button-close-menu"></use>
+                        <use class="button-open-menu" href="./images/sprite-button-menu.svg#button-open-menu"></use>
+                    </svg>
+                </button>
+            <div class="header-menu" id="header-menu" data-menu>
+                <nav class="menu">
+                    <ul class="list-studio-menu list-no-style">
+                        <li class="list-studio-item">
+                            <a class="link-studio" href="./index.html">Студия</a>
+                        </li>
+                        <li class="list-studio-item">
+                            <a href="./portfolio.html">Портфолио</a>
+                        </li>
+                        <li class="list-studio-item">
+                            <a href="#">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
                 <ul class="list-studio-contacts list-no-style">
                     <li class="studio-contacts-item">
-                        <a 
-                            class="studio-contacts-link contacts-mail" 
-                            href="malito:info@devstudio.com"
-                        >
+                        <a class="studio-contacts-link contacts-mail" href="malito:info@devstudio.com">
                             <svg class="studio-contacts-icon-mail">
                                 <use href="./images/sprite.svg#mail"></use>
                             </svg>
-                            info@devstudio.com</a
-                        >
+                            info@devstudio.com</a>
                     </li>
                     <li class="studio-contacts-item">
-                        <a 
-                            class="studio-contacts-link contacts-phone" 
-                            href="tel:+380961111111"
-                        >
+                        <a class="studio-contacts-link contacts-phone" href="tel:+380961111111">
                             <svg class="studio-contacts-icon-phone">
                                 <use href="./images/sprite.svg#phone"></use>
                             </svg>
-                            +38 096 111 11 11</a
-                        >
+                            +38 096 111 11 11</a>
                     </li>
                 </ul>
-        </div>
+                <ul class="header-social-links-list list-no-style">
+                    <li class="header-social-links-item">
+                        <a href="#">Instagram</a>
+                    </li>
+                    <li class="header-social-links-item">
+                        <a href="#">Twitter</a>
+                    </li>
+                    <li class="header-social-links-item">
+                        <a href="#">Facebook</a>
+                    </li>
+                    <li class="header-social-links-item">
+                        <a href="#">LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
+
+            </div>
+    
         </header>
         <!-- / site header -->
             <!-- hero -->
@@ -270,12 +282,19 @@
                 <h2 class="heading-team">Наша команда</h2>
                 <ul class="team-list list-no-style">
                     <li class="box-team-card">
+                        <picture>
+                            <source srcset="./images/team/team-1-desktop-x1.jpg 1x, 
+                                            ./images/team/team-1-desktop-x2.jpg 2x"
+                                             media="(min-width: 1200px)">
+                            <source srcset="./images/team/team-1-tablet-x1.jpg 1x, 
+                                            ./images/team/team-1-tablet-x2.jpg 2x" 
+                                    media="(min-width: 768px)">
                         <img 
-                            src="./images/images-page-1/team-1.jpg" 
+                            srcset="./images/team/team-1-mobile-x1.jpg 1x, ./images/team/team-1-mobile-x2.jpg 2x"
+                            src="./images/team/team-1-mobile-x1.jpg" 
                             alt="Игорь Демьяненко" 
-                            width="270" 
-                            height="261"
                         />
+                        </picture>
                         <div class="team-text-card">
                             <h3>Игорь Демьяненко</h3>
                             <p>Product Designer</p>
@@ -327,12 +346,19 @@
                         </div>
                     </li>
                     <li class="box-team-card">
+                        <picture>
+                            <source srcset="./images/team/team-2-desktop-x1.jpg 1x, 
+                                            ./images/team/team-2-desktop-x2.jpg 2x" 
+                                            media="(min-width: 1200px)">
+                            <source srcset="./images/team/team-2-tablet-x1.jpg 1x, 
+                                            ./images/team/team-2-tablet-x2.jpg 2x" 
+                                    media="(min-width: 768px)">
                         <img 
-                            src="./images/images-page-1/team-2.jpg" 
+                            srcset="./images/team/team-2-mobile-x1.jpg 1x, ./images/team/team-2-mobile-x2.jpg 2x"
+                            src="./images/team/team-2-mobile-x1.jpg" 
                             alt="Ольга Репина" 
-                            width="270" 
-                            height="261"
                         />
+                        </picture>
                         <div class="team-text-card">  
                             <h3>Ольга Репина</h3>
                             <p>Frontend Developer</p>
@@ -385,12 +411,19 @@
                         </div>
                     </li>  
                     <li class="box-team-card"> 
+                        <picture>
+                            <source srcset="./images/team/team-3-desktop-x1.jpg 1x, 
+                                            ./images/team/team-3-desktop-x2.jpg 2x" 
+                                    media="(min-width: 1200px)">
+                            <source srcset="./images/team/team-3-tablet-x1.jpg 1x, 
+                                            ./images/team/team-3-tablet-x2.jpg 2x" 
+                                    media="(min-width: 768px)">
                         <img 
-                            src="./images/images-page-1/team-3.jpg" 
+                            srcset="./images/team/team-3-mobile-x1.jpg 1x, ./images/team/team-3-mobile-x2.jpg 2x"
+                            src="./images/team/team-3-mobile-x1.jpg" 
                             alt="Николай Тарасов" 
-                            width="270" 
-                            height="261"
                         />
+                        </picture>
                         <div class="team-text-card">
                             <h3>Николай Тарасов</h3>
                             <p>Marketing</p>
@@ -443,12 +476,19 @@
                         </div>
                     </li>  
                     <li class="box-team-card">
+                        <picture>
+                            <source srcset="./images/team/team-4-desktop-x1.jpg 1x, 
+                                            ./images/team/team-4-desktop-x2.jpg 2x" 
+                                            media="(min-width: 1200px)">
+                            <source srcset="./images/team/team-4-tablet-x1.jpg 1x, 
+                                            ./images/team/team-4-tablet-x2.jpg 2x" 
+                                            media="(min-width: 768px)">
                         <img 
-                            src="./images/images-page-1/team-4.jpg" 
+                            srcset="./images/team/team-4-mobile-x1.jpg 1x, ./images/team/team-4-mobile-x2.jpg 2x"
+                            src="./images/team/team-4-mobile-x1.jpg" 
                             alt="Михаил Ермаков" 
-                            width="270" 
-                            height="261"
                         />
+                        </picture>
                         <div class="team-text-card">
                             <h3>Михаил Ермаков</h3>
                             <p>UI Designer</p>
@@ -651,10 +691,12 @@
                     <form class="follow-form">
                         <input type="text" name="follow" id="follow" placeholder="E-mail">
                         <label for="follow"></label>
+                        <div class="button-wrapper">
                         <button type="submit">Подписаться
                                 <span class="button-icon">
                                 </span>
                         </button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -676,6 +718,21 @@
               refs.modal.classList.toggle('is-hidden');
             }
           })();
+          (() => {
+                const menuBtnRef = document.querySelector("[data-menu-button]");
+                const mobileMenuRef = document.querySelector("[data-menu]");
+
+                menuBtnRef.addEventListener("click", () => {
+                    const expanded =
+                        menuBtnRef.getAttribute("aria-expanded") === "true" || false;
+
+                    menuBtnRef.classList.toggle("is-open");
+                    menuBtnRef.setAttribute("aria-expanded", !expanded);
+
+                    mobileMenuRef.classList.toggle("is-open");
+                });
+            })();
         </script>
     </body>
 </html>
+

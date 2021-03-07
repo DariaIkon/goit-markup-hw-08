@@ -1,8 +1,13 @@
 .form {
   display: flex;
   flex-direction: column;
-  width: 448px;
+  width: 370px;
+  height: 342px;
   margin: 0 auto;
+  @media screen and (min-width: $desktop) {
+    width: 448px;
+  }
+
   input:not([type="checkbox"]) {
     display: block;
     margin: 0;
@@ -97,15 +102,22 @@
   .form-text-checkbox {
     display: flex;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 1.714;
+    font-size: 12px;
+    line-height: 1.167;
     letter-spacing: 0.03em;
     color: $main-gray-color;
     margin: 0;
+    @media screen and (min-width: $desktop) {
+      font-size: 14px;
+      line-height: 1.714;
+    }
     a {
       color: $accent-color;
       text-decoration: underline;
-      margin-left: 9px;
+      margin-left: 4px;
+      @media screen and (min-width: $desktop) {
+        margin-left: 9px;
+      }
     }
   }
 }
