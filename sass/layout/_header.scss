@@ -1,5 +1,61 @@
+.body {
+  @media screen and (max-width: $tablet - 1px) {
+    .header-menu {
+      &.is-open {
+        display: block;
+      }
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 48px 83px 48px 40px;
+      z-index: 100;
+      background-color: $main-light-color;
+    }
+    .contacts-icon {
+      display: none;
+    }
+    .list-studio-contacts {
+      display: flex;
+      flex-direction: column-reverse;
+      margin-bottom: 64px;
+    }
+    .list-studio-menu li:not(:last-child) {
+      margin-bottom: 32px;
+    }
+    .contacts-phone {
+      font-size: 34px;
+      line-height: 1.176;
+      letter-spacing: 0.02em;
+      color: $accent-color;
+      margin-bottom: 32px;
+    }
+    .contacts-mail {
+      font-size: 24px;
+      line-height: 1.167;
+      letter-spacing: 0.02em;
+      color: $main-gray-color;
+    }
+    .header-social-links-list {
+      display: flex;
+    }
+    .header-social-links-item {
+      font-size: 18px;
+      line-height: 1.222;
+      letter-spacing: 0.02em;
+      color: $accent-color;
+      &:not(:last-child) {
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+        padding-right: 10px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
 header {
-  border-bottom: none;
+  padding: 16px 0px;
+  border-bottom: 1px solid #ececec;
   background-color: $main-light-color;
   .container {
     display: flex;
@@ -8,117 +64,57 @@ header {
       position: relative;
       justify-content: space-between;
       padding: 0 15px;
-      height: 60px;
-    }
-  }
-  .webstudio-logo-header {
-    font-family: Raleway;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 1.167;
-    letter-spacing: 0.03em;
-    color: $accent-color;
-    padding: 0;
-    @media screen and (min-width: $tablet) {
-      margin-right: 88px;
-    }
-    @media screen and (min-width: $desktop) {
-      margin-right: 93px;
-      font-size: 26px;
-      line-height: 1.192;
-    }
-    .webstudio-black {
-      color: $total-black;
     }
   }
 }
-.menu {
-  @media screen and (min-width: $tablet) {
+@media screen and (min-width: $tablet) {
+  .header-menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header-social-links-list {
+      display: none;
+    }
+  }
+}
+@media screen and (min-width: $tablet) {
+  .menu {
     display: flex;
     align-items: center;
   }
   .list-studio-menu {
-    @media screen and (min-width: $tablet) {
-      display: flex;
-    }
+    display: flex;
     li:not(:last-child) {
-      @media screen and (min-width: $tablet) {
-        margin-right: 50px;
-      }
+      margin-right: 50px;
     }
   }
 }
-.header-menu {
-  display: flex;
-  padding: 40px 48px;
-  z-index: 100;
-  &.is-open {
-    display: block;
-  }
-  @media screen and (max-width: $tablet - 1px) {
-    display: none;
 
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: $main-light-color;
-  }
-  @media screen and (min-width: $tablet) {
-  }
-}
+@media screen and (min-width: $tablet) and (max-width: 1199px) {
+  .header {
+    padding: 25px 0;
 
-.list-studio-menu {
-  margin-bottom: 302px;
-  a {
-    font-size: 40px;
-    line-height: 1.175;
-    text-align: left;
-    letter-spacing: 0.02em;
-    color: $main-dark-color;
-    @media screen and (min-width: $tablet) {
+    .list-studio-contacts {
       margin-bottom: 0;
-      padding-top: 32px;
-      padding-bottom: 32px;
-      font-size: 14px;
-      line-height: 1.333;
-      text-align: center;
-    }
-    &:hover,
-    &:active,
-    &:focus {
-      color: $accent-color;
-      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-  }
+      width: 138px;
+      display: flex;
+      flex-wrap: wrap;
 
-  li:not(:last-child) {
-    margin-bottom: 32px;
-    .link-studio {
-      @media screen and (min-width: $tablet) {
-        position: relative;
-        &::after {
-          content: "";
-          display: block;
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          height: 4px;
-          background: $accent-color;
-          border-radius: 2px;
+      .studio-contacts-item {
+        margin-bottom: 10px;
+        margin-right: 0px;
+
+        &:last-child {
+          margin-bottom: 0;
         }
       }
-      &:visited {
-        color: $accent-color;
-      }
     }
   }
 }
+
 .list-studio-contacts {
-  display: flex;
-  flex-direction: column-reverse;
-  margin-bottom: 64px;
   @media screen and (min-width: $desktop) {
     display: flex;
     margin-left: auto;
@@ -131,92 +127,92 @@ header {
       margin: 0 auto;
     }
   }
+}
+.contacts-icon {
+  margin-right: 10px;
+  fill: $main-gray-color;
+}
+.webstudio-logo-header {
+  font-family: Raleway;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.167;
+  letter-spacing: 0.03em;
+  color: $accent-color;
+  padding: 0;
+  @media screen and (min-width: $tablet) {
+    margin-right: 88px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-right: 93px;
+    font-size: 26px;
+    line-height: 1.192;
+  }
+  .webstudio-black {
+    color: $total-black;
+  }
+}
+.studio-contacts-link {
+  display: flex;
+  font-size: 12px;
+  line-height: 1.167;
+  color: $main-gray-color;
+  letter-spacing: 0.02em;
+  align-items: center;
+  @media screen and (min-width: $desktop) {
+    line-height: 1.143;
+    &.contacts-mail {
+      margin-right: 50px;
+    }
+    &:hover svg,
+    &:focus svg {
+      fill: $accent-color;
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+}
+
+.list-studio-menu {
+  margin-bottom: 302px;
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 0;
+  }
   a {
-    @media screen and (min-width: $desktop) {
-      display: flex;
-      align-items: center;
-      line-height: 1.143;
-      letter-spacing: 0.02em;
-      color: $main-gray-color;
-
-      &.contacts-mail {
-        margin-right: 50px;
-      }
-      &:hover svg,
-      &:focus svg {
-        fill: $accent-color;
-        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-      }
+    font-size: 40px;
+    line-height: 1.175;
+    text-align: left;
+    letter-spacing: 0.02em;
+    color: $main-dark-color;
+    @media screen and (min-width: $tablet) {
+      font-size: 14px;
+      line-height: 1.333;
+      text-align: center;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      color: $accent-color;
+      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
   }
-}
-.contacts-phone {
-  @media screen and (max-width: $tablet - 1px) {
-    font-size: 34px;
-    line-height: 1.176;
-    letter-spacing: 0.02em;
-    color: $accent-color;
-    margin-bottom: 32px;
-  }
-}
-.contacts-mail {
-  @media screen and (max-width: $tablet - 1px) {
-    font-size: 24px;
-    line-height: 1.167;
-    letter-spacing: 0.02em;
-    color: $main-gray-color;
-  }
-}
-.studio-contacts-icon-mail {
-  display: none;
-  @media screen and (min-width: $tablet) {
-    display: none;
-  }
-  @media screen and (min-width: $desktop) {
-    display: flex;
-    width: 16px;
-    height: 12px;
-    margin-right: 10px;
-    fill: $main-gray-color;
-  }
-}
-.studio-contacts-icon-phone {
-  display: none;
 
-  @media screen and (min-width: $tablet) {
-    display: none;
-  }
-  @media screen and (min-width: $desktop) {
-    display: flex;
-    width: 11px;
-    height: 17px;
-    margin-right: 10px;
-    fill: $main-gray-color;
-  }
-}
-.header-social-links-list {
-  @media screen and (max-width: $tablet - 1px) {
-    display: flex;
-  }
-  .header-social-links-item {
-    @media screen and (max-width: $tablet - 1px) {
-      &:not(:last-child) {
-        border-right: 1px solid rgba(33, 33, 33, 0.2);
-        padding-right: 10px;
-        margin-right: 10px;
-      }
-      a {
-        font-size: 18px;
-        line-height: 1.222;
-        letter-spacing: 0.02em;
-        color: $accent-color;
+  .link-studio {
+    position: relative;
+    @media screen and (min-width: $tablet) {
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 205%;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: $accent-color;
+        border-radius: 2px;
       }
     }
-  }
-  @media screen and (min-width: $tablet) {
-    display: none;
-  }
-  @media screen and (min-width: $desktop) {
-    display: none;
+    &:visited {
+      color: $accent-color;
+    }
   }
 }

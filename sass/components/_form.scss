@@ -1,6 +1,4 @@
 .form {
-  display: flex;
-  flex-direction: column;
   width: 370px;
   height: 342px;
   margin: 0 auto;
@@ -28,6 +26,7 @@
     color: $main-gray-color;
   }
   .form-label {
+    display: block;
     margin-bottom: 10px;
     svg {
       position: absolute;
@@ -53,6 +52,7 @@
     }
   }
   .form-textarea {
+    display: block;
     margin-bottom: 20px;
     textarea {
       display: block;

@@ -1,12 +1,21 @@
 .footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
+  width: 100%;
   background-color: $bg-dark-color;
   padding: 60px 0;
+  margin: 0;
   @media screen and (min-width: $desktop) {
-    flex-direction: row;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+  }
+  .footer-wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
   }
 
   h3 {
@@ -21,22 +30,42 @@
     margin-bottom: 20px;
     @media screen and (min-width: $desktop) {
       margin-bottom: 0;
+      text-align: left;
+    }
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    .footer-connect {
+      margin-left: 70px;
     }
   }
 }
+.logo {
+  text-align: center;
 
+  @media screen and (min-width: $tablet) {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
 .footer-contacts {
+  @media screen and (min-width: $tablet) {
+    width: 232px;
+    height: 127px;
+    margin-right: 165px;
+  }
   @media screen and (min-width: $desktop) {
     margin-right: 70px;
   }
 }
-.logo {
-  @media screen and (min-width: $desktop) {
-    margin-bottom: 20px;
-  }
-}
 a.webstudio-logo-footer {
-  margin: 0 auto;
   margin-bottom: 20px;
   font-family: Raleway;
   font-weight: bold;
@@ -44,10 +73,8 @@ a.webstudio-logo-footer {
   line-height: 1.167;
   letter-spacing: 0.03em;
   color: $accent-color;
-  width: 154px;
   min-height: 28px;
   @media screen and (min-width: $desktop) {
-    margin: 0;
     font-size: 26px;
     line-height: 1.192;
     width: 145px;
@@ -62,8 +89,8 @@ a.webstudio-logo-footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  @media screen and (min-width: $desktop) {
-    display: flex;
+  @media screen and (min-width: $tablet) {
+    display: block;
   }
   li:not(:last-child) {
     margin-bottom: 8px;
@@ -129,6 +156,17 @@ a.webstudio-logo-footer {
   display: flex;
   align-items: center;
   flex-direction: column;
+  @media screen and (min-width: $desktop) {
+    margin-left: 93px;
+  }
+  .follow-form {
+    @media screen and (min-width: $tablet) {
+      text-align: center;
+    }
+    @media screen and (min-width: $desktop) {
+      display: flex;
+    }
+  }
 }
 .follow-form {
   @media screen and (min-width: $desktop) {
@@ -140,6 +178,10 @@ a.webstudio-logo-footer {
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-sizing: border-box;
     margin-bottom: 20px;
+    @media screen and (min-width: $desktop) {
+      width: 358px;
+      margin-right: 12px;
+    }
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     background-color: inherit;
@@ -158,6 +200,9 @@ a.webstudio-logo-footer {
 
   .button-wrapper {
     padding: 0 134px;
+    @media screen and (min-width: $tablet) {
+      padding: 0;
+    }
     button {
       display: inline-flex;
       align-items: center;

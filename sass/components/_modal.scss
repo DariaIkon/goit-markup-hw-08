@@ -8,11 +8,12 @@
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   overflow-y: scroll;
+  z-index: 160;
   .modal {
     position: absolute;
-    top: 50%;
+    top: 20px;
     left: 50%;
-    transform: translate(-50%, -50%) scale(1);
+    transform: translateX(-50%) scale(1);
     min-width: 450px;
     min-height: 609px;
     background: $main-light-color;
@@ -21,9 +22,13 @@
     border-radius: 4px;
     transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
     padding: 40px;
+    z-index: 1000;
     @media screen and (min-width: $desktop) {
+      top: 50%;
+      transform: translate(-50%, -50%) scale(1);
       min-width: 528px;
-      min-height: 581px;
+      height: 581px;
+      overflow-y: auto;
     }
   }
   &.is-hidden {

@@ -19,10 +19,10 @@
         href="./css/main.min.css"
     />
 </head>
-    <body>
+    <body class="body">
         <!-- site header -->
         <header class="header">
-            <div class="container">
+            <div class="container header-container">
                 <a class="webstudio-logo-header" href="#"
                     >Web<span class="webstudio-black">Studio</span>
                 </a>
@@ -32,36 +32,51 @@
                         aria-expanded="false" 
                         aria-controls="header-menu" 
                         data-menu-button>
-                    <svg aria-label="переключатель моюбильного меню">
-                        <use class="button-close-menu" href="./images/sprite-button-menu.svg#button-close-menu"></use>
-                        <use class="button-open-menu" href="./images/sprite-button-menu.svg#button-open-menu"></use>
+                    <svg 
+                        width="40px"
+                        height="40px"
+                        aria-label="переключатель моюбильного меню">
+                    <use
+                        class="button-close-menu" 
+                        href="./images/sprite-button-menu.svg#button-close-menu"></use>
+                    <use 
+                        class="button-open-menu" 
+                        href="./images/sprite-button-menu.svg#button-open-menu"></use>
                     </svg>
                 </button>
             <div class="header-menu" id="header-menu" data-menu>
                 <nav class="menu">
                     <ul class="list-studio-menu list-no-style">
                         <li class="list-studio-item">
-                            <a class="link-studio" href="./index.html">Студия</a>
+                            <a 
+                                class="link-studio" 
+                                href="./index.html"
+                                >Студия</a>
                         </li>
                         <li class="list-studio-item">
-                            <a href="./portfolio.html">Портфолио</a>
+                            <a 
+                                href="./portfolio.html"
+                                >Портфолио</a>
                         </li>
                         <li class="list-studio-item">
-                            <a href="#">Контакты</a>
+                            <a 
+                                href="#"
+                                >Контакты</a>
                         </li>
                     </ul>
                 </nav>
+                <div class="wrapper-studio-contacts">
                 <ul class="list-studio-contacts list-no-style">
                     <li class="studio-contacts-item">
                         <a class="studio-contacts-link contacts-mail" href="malito:info@devstudio.com">
-                            <svg class="studio-contacts-icon-mail">
+                            <svg class="contacts-icon" width="16" height="12">
                                 <use href="./images/sprite.svg#mail"></use>
                             </svg>
                             info@devstudio.com</a>
                     </li>
                     <li class="studio-contacts-item">
                         <a class="studio-contacts-link contacts-phone" href="tel:+380961111111">
-                            <svg class="studio-contacts-icon-phone">
+                            <svg class="contacts-icon" width="10" height="16">
                                 <use href="./images/sprite.svg#phone"></use>
                             </svg>
                             +38 096 111 11 11</a>
@@ -81,19 +96,18 @@
                         <a href="#">LinkedIn</a>
                     </li>
                 </ul>
+                </div>
             </div>
-
             </div>
-    
         </header>
         <!-- / site header -->
             <!-- hero -->
         <section class="hero overlay">
-            <div class="container">
                 <div class="hero-box">
                     <h1 class="hero-heading">
                         Эффективные решения для вашего бизнеса
                     </h1>
+                </div>
                     <div class="hero-btn">
                         <button 
                             class="hero-button" 
@@ -104,7 +118,7 @@
                     <div class="backdrop is-hidden" data-modal>
                         <div class="modal">
                             <button 
-                                class="btn-close-modal" 
+                                class="btn-close-modal " 
                                 data-modal-close>
                                 <svg>
                                     <use href="./images/sprite-modal.svg#modal-form-close-btn">
@@ -170,8 +184,6 @@
                             </form>        
                         </div>
                     </div>
-                </div>
-            </div>
         </section>
             <!-- / hero -->
             <!-- main info  -->
@@ -617,7 +629,7 @@
 
 <!-- footer -->
     <footer class="footer">
-        <div class="container">
+        <div class="container footer-wrapper">
             <div class="footer-contacts">
                 <div class="logo">
                     <a href="#" class="webstudio-logo-footer"
@@ -689,7 +701,11 @@
                 <h3>Подпишитесь на рассылку</h3>
                 <div class="footer-follow-form">
                     <form class="follow-form">
-                        <input type="text" name="follow" id="follow" placeholder="E-mail">
+                        <input 
+                            type="text" 
+                            name="follow" 
+                            id="follow"
+                            placeholder="E-mail">
                         <label for="follow"></label>
                         <div class="button-wrapper">
                         <button type="submit">Подписаться
