@@ -16,10 +16,10 @@
         />  
         <link rel="stylesheet" href="./css/main.min.css"/>
     </head>
-    <body>
+    <body class="body">
         
     <!-- site header -->
-    <header class="header">
+    <!-- <header class="header">
         <div class="container header-container">
             <a class="webstudio-logo-header" href="#">Web<span class="webstudio-black">Studio</span>
             </a>
@@ -33,13 +33,13 @@
                 <nav class="menu">
                     <ul class="list-studio-menu list-no-style">
                         <li class="list-studio-item">
-                            <a href="./index.html">Студия</a>
+                            <a class="list-studio-link" href="./index.html">Студия</a>
                         </li>
                         <li class="list-studio-item">
-                            <a class="link-studio"  href="./portfolio.html">Портфолио</a>
+                            <a class="link-studio list-studio-link"  href="./portfolio.html">Портфолио</a>
                         </li>
                         <li class="list-studio-item">
-                            <a href="#">Контакты</a>
+                            <a class="list-studio-link" href="#">Контакты</a>
                         </li>
                     </ul>
                 </nav>
@@ -76,8 +76,67 @@
                     </ul>
                 </div>
             </div>
-        </div>
-    </header>
+        </div> -->
+    <!-- </header> -->
+            <header class="header">
+                <div class="container header-container">
+                    <a class="webstudio-logo-header" href="#">Web<span class="webstudio-black">Studio</span>
+                    </a>
+                    <button class="header-button" type="button" aria-expanded="false" aria-controls="header-menu" data-menu-button>
+                        <svg width="40px" height="40px" aria-label="переключатель моюбильного меню">
+                            <use class="button-close-menu" href="./images/sprite-button-menu.svg#button-close-menu"></use>
+                            <use class="button-open-menu" href="./images/sprite-button-menu.svg#button-open-menu"></use>
+                        </svg>
+                    </button>
+                    <div class="header-menu" id="header-menu" data-menu>
+                        <nav class="menu">
+                            <ul class="list-studio-menu list-no-style">
+                                <li class="list-studio-item">
+                                    <a class="list-studio-link" href="./index.html">Студия</a>
+                                </li>
+                                <li class="list-studio-item">
+                                    <a class="list-studio-link link-studio" href="./portfolio.html">Портфолио</a>
+                                </li>
+                                <li class="list-studio-item">
+                                    <a class="list-studio-link" href="#">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="wrapper-studio-contacts">
+                            <ul class="list-studio-contacts list-no-style">
+                                <li class="studio-contacts-item">
+                                    <a class="studio-contacts-link contacts-mail" href="malito:info@devstudio.com">
+                                        <svg class="contacts-icon" width="16" height="12">
+                                            <use href="./images/sprite.svg#mail"></use>
+                                        </svg>
+                                        info@devstudio.com</a>
+                                </li>
+                                <li class="studio-contacts-item">
+                                    <a class="studio-contacts-link contacts-phone" href="tel:+380961111111">
+                                        <svg class="contacts-icon" width="10" height="16">
+                                            <use href="./images/sprite.svg#phone"></use>
+                                        </svg>
+                                        +38 096 111 11 11</a>
+                                </li>
+                            </ul>
+                            <ul class="header-social-links-list list-no-style">
+                                <li class="header-social-links-item">
+                                    <a href="#">Instagram</a>
+                                </li>
+                                <li class="header-social-links-item">
+                                    <a href="#">Twitter</a>
+                                </li>
+                                <li class="header-social-links-item">
+                                    <a href="#">Facebook</a>
+                                </li>
+                                <li class="header-social-links-item">
+                                    <a href="#">LinkedIn</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
         <!-- portfolio-->
     <main class="portfolio">
         <div class="container">
@@ -496,7 +555,7 @@
     </footer>
 <!-- /footer -->
         <script>
-            (() => {
+           (() => {
                 const menuBtnRef = document.querySelector("[data-menu-button]");
                 const mobileMenuRef = document.querySelector("[data-menu]");
 
