@@ -1,9 +1,11 @@
 .form {
-  width: 370px;
   height: 342px;
   margin: 0 auto;
+  @media screen and (min-width: $mobile) {
+    min-width: 370px;
+  }
   @media screen and (min-width: $desktop) {
-    width: 448px;
+    min-width: 448px;
   }
 
   input:not([type="checkbox"]) {

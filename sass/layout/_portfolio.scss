@@ -119,8 +119,11 @@
       }
 
       .box-portfolio {
-        width: 450px;
-        height: 404px;
+        width: 100%;
+        @media screen and (min-width: $mobile) {
+          width: 450px;
+          height: 404px;
+        }
         @media screen and (min-width: $tablet) {
           width: 354px;
           height: 440px;
